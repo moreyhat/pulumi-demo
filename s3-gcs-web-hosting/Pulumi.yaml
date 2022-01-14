@@ -1,0 +1,6 @@
+name: s3-gcs-web-hosting
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Amazon S3 and Google Cloud Storage static web hosting
