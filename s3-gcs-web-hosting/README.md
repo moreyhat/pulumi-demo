@@ -30,7 +30,7 @@ This sample shows how to deploy statice website on Amazon S3 and Google Cloud St
     $ pulumi up
     Previewing update (s3-gcs-web-hosting)
 
-    View Live: https://app.pulumi.com/Moriya/s3-gcs-web-hosting/s3-gcs-web-hosting/previews/f56317b0-dccb-4fa4-bc9c-64772fef2d6a
+    View Live: https://app.pulumi.com/xxxxxxxx/s3-gcs-web-hosting/s3-gcs-web-hosting/previews/xxxxxxxxxxxxxxxxxx
 
         Type                             Name                                   Plan       
     +   pulumi:pulumi:Stack              s3-gcs-web-hosting-s3-gcs-web-hosting  create     
@@ -50,7 +50,7 @@ This sample shows how to deploy statice website on Amazon S3 and Google Cloud St
     Do you want to perform this update? yes
     Updating (s3-gcs-web-hosting)
 
-    View Live: https://app.pulumi.com/Moriya/s3-gcs-web-hosting/s3-gcs-web-hosting/updates/3
+    View Live: https://app.pulumi.com/xxxxxx/s3-gcs-web-hosting/s3-gcs-web-hosting/updates/1
 
         Type                             Name                                   Status      
     +   pulumi:pulumi:Stack              s3-gcs-web-hosting-s3-gcs-web-hosting  created     
