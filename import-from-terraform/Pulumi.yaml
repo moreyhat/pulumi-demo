@@ -1,0 +1,6 @@
+name: import-from-terraform
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Deloy EC2 instance to the exsisting VPC created by terrafrom
