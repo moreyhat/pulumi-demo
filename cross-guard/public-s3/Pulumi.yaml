@@ -1,0 +1,6 @@
+name: public-s3
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Public read S3 bucket
