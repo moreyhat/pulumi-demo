@@ -27,15 +27,11 @@ def ec2_no_ssh_full_open_validator(args: ResourceValidationArgs, report_violatio
         for id in args.props["vpcSecurityGroupIds"]:
             inbound_rules = get_sg_inbound_rules(id)
             for inbound_rule in inbound_rules:
-                from_port = inbound_rule["FromPort"]
-                to_port = inbound_rule["ToPort"]
-                ipv4_ranges = inbound_rule["IpRanges"]
-                ipv6_ranges = inbound_rule["IpRanges"]
-                if from_port <= 22 and to_port >= 22:
-                    for ipv4_range in ipv4_ranges:
+                if inbound_rule["FromPort"] <= 22 and inbound_rule["ToPort"] >= 22:
+                    for ipv4_range in inbound_rule["IpRanges"]:
                         if ipv4_range['CidrIp'] == '0.0.0.0/0':
                             report_violation("You cannot attach security group which has the SSH full open rule to EC2 instance. ")
-                    for ipv6_range in ipv6_ranges:
+                    for ipv6_range in inbound_rule["Ipv6Ranges"]:
                         if ipv6_range['CidrIp'] == '::/0':
                             report_violation("You cannot attach security group which has the SSH full open rule to EC2 instance. ")
 
