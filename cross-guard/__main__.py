@@ -32,7 +32,7 @@ def ec2_no_ssh_full_open_validator(args: ResourceValidationArgs, report_violatio
                         if ipv4_range['CidrIp'] == '0.0.0.0/0':
                             report_violation("You cannot attach security group which has the SSH full open rule to EC2 instance. ")
                     for ipv6_range in inbound_rule["Ipv6Ranges"]:
-                        if ipv6_range['CidrIp'] == '::/0':
+                        if ipv6_range['CidrIpv6'] == '::/0':
                             report_violation("You cannot attach security group which has the SSH full open rule to EC2 instance. ")
 
 s3_no_public_read = ResourceValidationPolicy(
